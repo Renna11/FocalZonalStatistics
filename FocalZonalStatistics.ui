@@ -1,0 +1,1201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>619</width>
+    <height>659</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Focal Zonal Statistics</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>C:/Users/Administrator.DESKTOP-DDI0S36/.designer/backup/icons/main.ico</normaloff>C:/Users/Administrator.DESKTOP-DDI0S36/.designer/backup/icons/main.ico</iconset>
+  </property>
+  <widget class="QPushButton" name="btnRun">
+   <property name="geometry">
+    <rect>
+     <x>464</x>
+     <y>623</y>
+     <width>50</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>51</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>Run</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnQuit">
+   <property name="geometry">
+    <rect>
+     <x>547</x>
+     <y>623</y>
+     <width>50</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>51</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnAddToConfigFile">
+   <property name="geometry">
+    <rect>
+     <x>293</x>
+     <y>623</y>
+     <width>141</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Add to Config File</string>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>7</x>
+     <y>9</y>
+     <width>601</width>
+     <height>415</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tabFocal">
+    <attribute name="title">
+     <string>Focal Stats</string>
+    </attribute>
+    <widget class="QGroupBox" name="gbFocalAdvSet">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>216</y>
+       <width>280</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Advanced Setting</string>
+     </property>
+     <widget class="QLabel" name="labelFocalDataChunk">
+      <property name="geometry">
+       <rect>
+        <x>25</x>
+        <y>20</y>
+        <width>91</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sub-gridding</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelFocalProcNum">
+      <property name="geometry">
+       <rect>
+        <x>25</x>
+        <y>55</y>
+        <width>91</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Process Number</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editFocalProcNum">
+      <property name="geometry">
+       <rect>
+        <x>159</x>
+        <y>55</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editFocalDataChunk">
+      <property name="geometry">
+       <rect>
+        <x>159</x>
+        <y>20</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editFocalThreshold">
+      <property name="geometry">
+       <rect>
+        <x>159</x>
+        <y>90</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelFocalThreshold">
+      <property name="geometry">
+       <rect>
+        <x>26</x>
+        <y>90</y>
+        <width>131</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Threshold</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="cbFocalIgnoreNodata">
+      <property name="geometry">
+       <rect>
+        <x>26</x>
+        <y>130</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ignore Nodata</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="gbFocalStatsSet">
+     <property name="geometry">
+      <rect>
+       <x>311</x>
+       <y>116</y>
+       <width>280</width>
+       <height>92</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Statistics Setting</string>
+     </property>
+     <widget class="QLabel" name="labelFocalStatsType">
+      <property name="geometry">
+       <rect>
+        <x>25</x>
+        <y>20</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Statistics Type</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cbFocalStatsType">
+      <property name="geometry">
+       <rect>
+        <x>129</x>
+        <y>20</y>
+        <width>130</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelFocalPercentile">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>55</y>
+        <width>105</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Percentile Value</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editFocalPercentile">
+      <property name="geometry">
+       <rect>
+        <x>159</x>
+        <y>55</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="gbFocalNbhSet">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>116</y>
+       <width>280</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Neighbourhood Setting</string>
+     </property>
+     <widget class="QLabel" name="labelFocalWndType">
+      <property name="geometry">
+       <rect>
+        <x>25</x>
+        <y>20</y>
+        <width>81</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Window Type</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cbFocalWndType">
+      <property name="geometry">
+       <rect>
+        <x>117</x>
+        <y>20</y>
+        <width>141</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editFocalNbhSet3">
+      <property name="geometry">
+       <rect>
+        <x>158</x>
+        <y>125</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editFocalNbhSet2">
+      <property name="geometry">
+       <rect>
+        <x>158</x>
+        <y>90</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelFocalNbhSet3">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>125</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Semi-major Axis</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelFocalNbhSet2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>90</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Half Length</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editFocalNbhSet1">
+      <property name="geometry">
+       <rect>
+        <x>158</x>
+        <y>55</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelFocalNbhSet1">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>55</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Half Width</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="rbFocalCell">
+      <property name="geometry">
+       <rect>
+        <x>158</x>
+        <y>160</y>
+        <width>50</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Cell</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="rbFocalMap">
+      <property name="geometry">
+       <rect>
+        <x>222</x>
+        <y>160</y>
+        <width>45</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Map</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelFocalNbhSet4">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>160</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Units</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="gbFocalRasterSet">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>8</y>
+       <width>580</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Rasters Setting</string>
+     </property>
+     <widget class="QLabel" name="labelFocalValRas">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>18</y>
+        <width>85</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Value Raster</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelFocalRstRas">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>52</y>
+        <width>85</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Result Raster</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editFocalValRas">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>18</y>
+        <width>425</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editFocalRstRas">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>52</y>
+        <width>425</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnFocalSelValRas">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>17</y>
+        <width>28</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnFocalSaveRstRas">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>52</y>
+        <width>28</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tabZonal">
+    <attribute name="title">
+     <string>Zonal Stats</string>
+    </attribute>
+    <widget class="QGroupBox" name="gbZonalRasterSet">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>8</y>
+       <width>580</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Rasters Setting</string>
+     </property>
+     <widget class="QLabel" name="labelZonalValRas">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>18</y>
+        <width>85</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Value Raster</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelZonalZoneRas">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>52</y>
+        <width>85</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Zone Raster</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelZonalRstRas">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>86</y>
+        <width>85</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Result Raster</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editZonalValRas">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>18</y>
+        <width>425</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editZonalZoneRas">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>52</y>
+        <width>425</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editZonalRstRas">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>86</y>
+        <width>425</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnZonalSelValRas">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>17</y>
+        <width>28</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnZonalSelZoneRas">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>50</y>
+        <width>28</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnZonalSaveRstRas">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>84</y>
+        <width>28</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="gbZonalStatsSet">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>140</y>
+       <width>280</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Statistics Setting</string>
+     </property>
+     <widget class="QLabel" name="labelZonalStatsType">
+      <property name="geometry">
+       <rect>
+        <x>25</x>
+        <y>20</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Statistics Type</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cbZonalStatsType">
+      <property name="geometry">
+       <rect>
+        <x>129</x>
+        <y>20</y>
+        <width>130</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelZonalPercentile">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>55</y>
+        <width>105</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Percentile Value</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editZonalPercentile">
+      <property name="geometry">
+       <rect>
+        <x>159</x>
+        <y>55</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="gbZonalAdvSet">
+     <property name="geometry">
+      <rect>
+       <x>309</x>
+       <y>140</y>
+       <width>280</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Advanced Setting</string>
+     </property>
+     <widget class="QLineEdit" name="editZonalThreshold">
+      <property name="geometry">
+       <rect>
+        <x>159</x>
+        <y>20</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelZonalThreshold">
+      <property name="geometry">
+       <rect>
+        <x>26</x>
+        <y>20</y>
+        <width>131</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Threshold</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="cbZonalIgnoreNodata">
+      <property name="geometry">
+       <rect>
+        <x>26</x>
+        <y>60</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ignore Nodata</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tabFZMixed">
+    <attribute name="title">
+     <string>FZ Mixed Stats</string>
+    </attribute>
+    <widget class="QGroupBox" name="gbFZMixedRasterSet">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>8</y>
+       <width>580</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Rasters Setting</string>
+     </property>
+     <widget class="QLabel" name="labelFZMixedValRas">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>18</y>
+        <width>85</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Value Raster</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelFZMixedZoneRas">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>52</y>
+        <width>85</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Zone Raster</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelFZMixedRstRas">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>86</y>
+        <width>85</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Result Raster</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editFZMixedValRas">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>18</y>
+        <width>425</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editFZMixedZoneRas">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>52</y>
+        <width>425</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editFZMixedRstRas">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>86</y>
+        <width>425</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnFZMixedSelValRas">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>17</y>
+        <width>28</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnFZMixedSelZoneRas">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>50</y>
+        <width>28</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnFZMixedSaveRstRas">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>84</y>
+        <width>28</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="gbFZMixedNbhSet">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>140</y>
+       <width>280</width>
+       <height>241</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Neighbourhood Setting</string>
+     </property>
+     <widget class="QLabel" name="labelFZMixedWndType">
+      <property name="geometry">
+       <rect>
+        <x>25</x>
+        <y>20</y>
+        <width>81</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Window Type</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cbFZMixedWndType">
+      <property name="geometry">
+       <rect>
+        <x>117</x>
+        <y>20</y>
+        <width>141</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editFZMixedNbhSet3">
+      <property name="geometry">
+       <rect>
+        <x>158</x>
+        <y>122</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editFZMixedNbhSet2">
+      <property name="geometry">
+       <rect>
+        <x>158</x>
+        <y>88</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelFZMixedNbhSet3">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>122</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Semi-major Axis</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelFZMixedNbhSet2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>88</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Half Length</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editFZMixedNbhSet1">
+      <property name="geometry">
+       <rect>
+        <x>158</x>
+        <y>54</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelFZMixedNbhSet1">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>54</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Half Width</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="rbtnFZMixedCell">
+      <property name="geometry">
+       <rect>
+        <x>158</x>
+        <y>156</y>
+        <width>50</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Cell</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="rbtnFZMixedMap">
+      <property name="geometry">
+       <rect>
+        <x>222</x>
+        <y>156</y>
+        <width>45</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Map</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelFZMixedNbhSet4">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>156</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Units</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="gbFZMixedAdvSet">
+     <property name="geometry">
+      <rect>
+       <x>307</x>
+       <y>238</y>
+       <width>280</width>
+       <height>145</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Advanced Setting</string>
+     </property>
+     <widget class="QLabel" name="labelFZMixedDataChunk">
+      <property name="geometry">
+       <rect>
+        <x>25</x>
+        <y>18</y>
+        <width>131</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sub-gridding</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelFZMixedProcNum">
+      <property name="geometry">
+       <rect>
+        <x>25</x>
+        <y>52</y>
+        <width>131</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Process Number</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editFZMixedProcNum">
+      <property name="geometry">
+       <rect>
+        <x>159</x>
+        <y>52</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editFZMixedDataChunk">
+      <property name="geometry">
+       <rect>
+        <x>159</x>
+        <y>18</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editFZMixedThreshold">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>86</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelFZMixedThreshold">
+      <property name="geometry">
+       <rect>
+        <x>26</x>
+        <y>86</y>
+        <width>131</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Threshold</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="cbFZIgnoreNodata">
+      <property name="geometry">
+       <rect>
+        <x>27</x>
+        <y>120</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ignore Nodata</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="gbFZMixedStatsSet">
+     <property name="geometry">
+      <rect>
+       <x>308</x>
+       <y>140</y>
+       <width>280</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Statistics Setting</string>
+     </property>
+     <widget class="QLabel" name="labelFZMixedStatsType">
+      <property name="geometry">
+       <rect>
+        <x>25</x>
+        <y>20</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Statistics Type</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cbFZMixedStatsType">
+      <property name="geometry">
+       <rect>
+        <x>129</x>
+        <y>20</y>
+        <width>130</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelFZMixedPercentile">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>54</y>
+        <width>105</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Percentile Value</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editFZMixedPercentile">
+      <property name="geometry">
+       <rect>
+        <x>159</x>
+        <y>54</y>
+        <width>100</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="gbMsg">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>430</y>
+     <width>599</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Processing  Message</string>
+   </property>
+   <widget class="QTextBrowser" name="tbMsg">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>20</y>
+      <width>581</width>
+      <height>151</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="btnAddToConfigFilePop">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>623</y>
+     <width>17</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&gt;</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>18</width>
+     <height>16</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnRunPop">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>623</y>
+     <width>17</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&gt;</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>18</width>
+     <height>16</height>
+    </size>
+   </property>
+  </widget>
+  <zorder>btnRunPop</zorder>
+  <zorder>btnAddToConfigFilePop</zorder>
+  <zorder>btnRun</zorder>
+  <zorder>btnQuit</zorder>
+  <zorder>btnAddToConfigFile</zorder>
+  <zorder>tabWidget</zorder>
+  <zorder>gbMsg</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
