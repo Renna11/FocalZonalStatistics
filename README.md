@@ -107,8 +107,8 @@ Topographic factors have a significant impact on the identification of geotherma
     In this example, a circular window with a radius of 240 cells is used as the neighborhood, and the mean (MEAN) and standard deviation (STD) layers are calculated separately. The specific parameter settings are shown in Figure 3.
 
 <div align="center">
-  <img src="https://github.com/Renna11/FocalZonalStatistics/blob/main/docs/source/pics/ReadMe_Fig3a.jpg" alt="ReadMe Image" width="50%" />
-  <img src="https://github.com/Renna11/FocalZonalStatistics/blob/main/docs/source/pics/ReadMe_Fig3b.jpg" alt="ReadMe Image" width="50%" />
+  <img src="https://github.com/Renna11/FocalZonalStatistics/blob/main/docs/source/pics/ReadMe_Fig3a.jpg" alt="ReadMe Image" width="40%" />
+  <img src="https://github.com/Renna11/FocalZonalStatistics/blob/main/docs/source/pics/ReadMe_Fig3b.jpg" alt="ReadMe Image" width="40%" />
 </div>
 
 <div align="center">
