@@ -107,8 +107,8 @@ Topographic factors have a significant impact on the identification of geotherma
     In this example, a circular window with a radius of 240 cells is used as the neighborhood, and the mean (MEAN) and standard deviation (STD) layers are calculated separately. The specific parameter settings are shown in Figure 3.
 
 <div align="center">
-  <img src="https://github.com/Renna11/FocalZonalStatistics/blob/main/docs/source/pics/ReadMe_Fig3a.jpg" alt="ReadMe Image" width="40%" />
-  <img src="https://github.com/Renna11/FocalZonalStatistics/blob/main/docs/source/pics/ReadMe_Fig3b.jpg" alt="ReadMe Image" width="40%" />
+  <img src="https://github.com/Renna11/FocalZonalStatistics/blob/main/docs/source/pics/ReadMe_Fig3a.jpg" alt="ReadMe Image" width="50%" />
+  <img src="https://github.com/Renna11/FocalZonalStatistics/blob/main/docs/source/pics/ReadMe_Fig3b.jpg" alt="ReadMe Image" width="50%" />
 </div>
 
 <div align="center">
@@ -124,7 +124,7 @@ Figure 3. Focal-Zonal Parameter Settings Interface
 - **Step 4:** Use the raster calculation tool in ArcMap to compute and generate a raster layer of anomalous temperature distribution that suppresses the effects of topography, as shown in Figure 4.
 
 <p align="center">
-  <img src="https://github.com/Renna11/FocalZonalStatistics/blob/main/docs/source/pics/ReadMe_Fig4.jpg" alt="ReadMe Image" />
+  <img src="https://github.com/Renna11/FocalZonalStatistics/blob/main/docs/source/pics/ReadMe_Fig4.jpg" alt="ReadMe Image" width="80%"/>
 </p>
 
 <p align="center">
@@ -134,7 +134,7 @@ Figure 4. Raster Layer Calculation of Anomalous Temperature Distribution with To
 - **Step 5:** The anomalous temperature distribution raster generated in Step 4, along with the known spatial distribution of geothermal points, will serve as a basis for evaluating the accuracy of the identification results. It will also help comprehensively assess the model's effectiveness and applicability. Figure 5 shows the spatial distribution of the anomalous temperature raster and known geothermal points.
 
 <p align="center">
-  <img src="https://github.com/Renna11/FocalZonalStatistics/blob/main/docs/source/pics/ReadMe_Fig5.jpg" alt="ReadMe Image" />
+  <img src="https://github.com/Renna11/FocalZonalStatistics/blob/main/docs/source/pics/ReadMe_Fig5.jpg" alt="ReadMe Image" width="80%"/>
 </p>
 
 <p align="center">
