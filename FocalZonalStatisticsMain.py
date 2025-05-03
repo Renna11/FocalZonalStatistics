@@ -1,13 +1,14 @@
 # coding=utf-8
 import os
 import sys
+import time
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import FocalZonalStatistics
 from PyQt5  import QtCore
 from PyQt5  import QtGui
 from PyQt5  import QtWidgets
-from PyQt5.QtWidgets import QApplication, QDialog, QFileDialog, QMenu, QAction
+from PyQt5.QtWidgets import QApplication, QDialog, QFileDialog, QMenu, QAction, QMessageBox
 
 import subprocess
 import multiprocessing as mp
@@ -772,7 +773,13 @@ class MainDialog(QDialog):
 
         return object
 
-
+    def show_completion_dialog(self, elapsed_time):
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setWindowTitle("Run")
+        msg.setText(f"Completed！\ntimes：{elapsed_time:.2f} seconds")
+        msg.setStandardButtons(QMessageBox.Ok)
+        msg.exec_()
 
     def AddToConfigFile(self):
         object = self.ConstructObject()
@@ -787,9 +794,12 @@ class MainDialog(QDialog):
         run_config(self.config_file_path)
 
     def Run(self):
+        self.start_time = time.time()
         object = self.ConstructObject()
         if object != None:
             process_object(object)
+        elapsed_time = time.time() - self.start_time
+        self.show_completion_dialog(elapsed_time)
 
     def Quit(self):
         sys.exit()
